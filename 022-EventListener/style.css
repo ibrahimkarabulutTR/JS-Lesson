@@ -1,0 +1,92 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+body {
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+}
+main {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+.box {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+ul {
+	max-width: 250px;
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+ul li {
+	position: relative;
+	background: rgba(240,240,245);
+	max-width: 250px;
+	width: 100%;
+	height: 45px;
+	padding: 0 0 0 15px;
+	border-radius: 10px;
+	margin: 8px auto;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 300ms ease-in-out;
+	overflow: hidden;
+}
+ul li .del {
+	position: relative;
+	width: 45px;
+	height: 45px;
+	transition: 200ms ease-in-out;
+	border-left: 1px solid #ddd;
+	cursor: pointer;
+}
+ul li .del::before {
+	font-family: 'bootstrap-icons';
+	content: '\F78B';
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	display: grid;
+	place-items: center;
+}
+ul li .del:hover {
+	background: rgba(0,0,0,.1);
+}
+form {
+	max-width: 250px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	border-radius: 10px;
+	overflow: hidden;
+}
+form #valueInput {
+	height: 45px;
+	padding: 0 15px;
+	box-shadow: inset 0 0 0 1px #ddd;
+	flex: 1 1 200px;
+	border-radius: 10px 0 0 10px;
+}
+form #addSubmit {
+	background: #000;
+	color: #fff;
+	font-size: 22px;
+	flex: 0 0 45px;
+}
